@@ -22,6 +22,10 @@ body {
   background-color: #223;
   padding: 1em;
   color: white;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
 }
 .nav-links {
   list-style: none;
