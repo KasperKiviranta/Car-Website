@@ -4,6 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Cars</title>
   <link rel="stylesheet" href="styles/style_about_us.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
   <!-- Navigation -->
@@ -12,7 +16,7 @@
       <div class="logo">Cool Cars</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#models">Models</a></li>
+        <li><a href="models.html">Models</a></li>
         <li><a href="about_us.html">About Us</a></li>
       </ul>
     </nav>
@@ -26,22 +30,37 @@
     </div>
   </section>
 
-<section id="profiles" class="profiles_class">
+  <section id="profiles" class="profiles_class">
     <h2>Contacts</h2>
     <div class="persons">
-        <a href="https://github.com/KasperKiviranta" class="person-prof" target="_blank">
-            <img src="person_photos/person1.jpg" alt="Person 1">
-            <h3>Kasper</h3>
-            <p>Cool dude</p>
+        <a class="person-prof" target="_blank">
+            <img src="person_photos/person1.jpg" alt="Main" class="rounded-circle">
+            <h3>Kasper Kiviranta</h3>
+            <p>Student of Bachelor of Administration at Laurea University of Applied Sciences</p>
+            
         </a>
-        
-            <a href="https://www.imdb.com/title/tt7888964/" class="person-prof" target="_blank">
-                <img src="person_photos/person2.jpg" alt="Person 2">
-                <h3>Nobody</h3>
-                <p>Not a cool dude</p>
-            </a>
-            </div>
+        <div class="social-icons">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/KasperKiviranta" class="btn btn-outline-dark btn-sm d-flex align-items-center mb-2">
+              <img src="person_photos/github.png" alt="GitHub" class="social-icon">
+              <span class="ms-2">GitHub</span>
+          </a>
+          <!-- LinkedIn Icon -->
+          <a href="https://www.linkedin.com/in/kasper-kiviranta-100a12237/" class="btn btn-outline-primary btn-sm d-flex align-items-center mb-2">
+              <img src="person_photos/linkedin.png" alt="LinkedIn" class="social-icon">
+              <span class="ms-2">LinkedIn</span>
+          </a>
+          <!-- Email Icon -->
+          <a href="mailto:kasper.kiviranta@student.laurea.com" class="btn btn-outline-info btn-sm d-flex align-items-center mb-2">
+              <img src="person_photos/outlook.png" alt="Email" class="social-icon">
+              <span class="ms-2">Email</span>
+          </a>
+      </div>
+      
+    </div>
 </section>
+
+  
   
   
 </body>

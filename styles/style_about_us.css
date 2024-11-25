@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(34, 34, 51,0.8);
+  background-color: rgba(34, 34, 51,0.95);
   padding: 1em;
   color: white;
   position: fixed;
@@ -81,11 +81,27 @@ body {
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
   z-index: 2; 
 }
+
 .hero-text p {
   font-size: 1.25em;
   color: #dddddd;
   margin-top: 0.5em;
-  z-index: 2; 
+  z-index: 2;
+  overflow: hidden; 
+  white-space: nowrap; 
+  width: 0; 
+  animation: typing 2.5s steps(30) 0.3s forwards, blink 0.75s step-end 1.5s forwards; 
+
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  0% {
+    width: 0; 
+  }
+  100% {
+    width: 100%; 
+  }
 }
 
 .cta-button {
@@ -113,6 +129,8 @@ body {
 .profiles_class {
   padding: 2em;
   text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .persons {
@@ -121,26 +139,69 @@ body {
   justify-content: center;
   margin-top: 1.5em;
 }
+
 .person-prof {
   background: #223;
   color: white;
   padding: 1em;
-  width: 200px;
+  width: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   text-decoration: none;
+  border: 2px solid transparent;
 }
+
 .person-prof:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #ff5e57;
 }
+
 .person-prof img {
   width: 100%;
+  max-width: 120px; /* Adjust size of profile picture */
   border-radius: 50%;
 }
+
 .person-prof h3 {
   margin-top: 0.5em;
   color: #ff5e57;
 }
+
+.social-icons {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges items vertically */
+  align-items: flex-start; /* Aligns items to the left (optional, change to 'center' for centering) */
+  gap: 10px; /* Adds spacing between the items */
+  margin-top: 1em;
+}
+
+.social-icons a {
+  display: flex; /* Ensures that icon and text align properly */
+  align-items: center; /* Centers icon and text vertically */
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits text color */
+}
+
+.social-icon {
+  width: 50px; /* Size of the social media icons */
+  height: 50px;
+  border-radius: 8px; /* Makes the icons circular */
+  margin-right: 10px; /* Adds spacing between icon and text */
+  object-fit: cover;
+}
+
+
+.social-icons a:hover {
+  transform: translateX(10px); /* Adds slide effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+.social-icon:hover {
+  transform: scale(1.2); /* Enlarges icon slightly */
+  transition: transform 0.3s ease-in-out;
+}
+
+
