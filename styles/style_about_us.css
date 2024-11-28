@@ -4,14 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* Dark Mode Styling */
-body {
-  background-color: #121212;
-  color: #f0f0f0;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar */
@@ -19,7 +11,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(34, 34, 51,0.95);
+  background-color: rgba(34, 34, 51, 0.9);
   padding: 1em;
   color: white;
   position: fixed;
@@ -27,13 +19,16 @@ body {
   width: 100%; 
   z-index: 1000; 
 }
+
 .nav-links {
   list-style: none;
   display: flex;
 }
+
 .nav-links li {
   margin-left: 20px;
 }
+
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -41,6 +36,7 @@ body {
   position: relative;
   transition: color 0.3s;
 }
+
 .nav-links a:hover {
   color: #ff5e57;
   font-size: 20px;
@@ -60,6 +56,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .hero::after {
   content: '';
   position: absolute;
@@ -70,28 +67,27 @@ body {
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
+
 .hero-text {
   position: relative; 
   z-index: 2; 
 }
+
 .hero-text h1 {
   font-size: 3.5em;
   font-weight: 600;
   color: #ffffff;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
-  z-index: 2; 
 }
 
 .hero-text p {
   font-size: 1.25em;
   color: #dddddd;
   margin-top: 0.5em;
-  z-index: 2;
   overflow: hidden; 
   white-space: nowrap; 
   width: 0; 
   animation: typing 2.5s steps(30) 0.3s forwards, blink 0.75s step-end 1.5s forwards; 
-
 }
 
 /* Keyframes for typing effect */
@@ -119,6 +115,7 @@ body {
   position: relative; 
   z-index: 2; 
 }
+
 .cta-button:hover {
   background-color: #e14b47;
   transform: scale(1.05);
@@ -161,7 +158,7 @@ body {
 
 .person-prof img {
   width: 100%;
-  max-width: 120px; /* Adjust size of profile picture */
+  max-width: 120px; 
   border-radius: 50%;
 }
 
@@ -170,38 +167,59 @@ body {
   color: #ff5e57;
 }
 
-.social-icons {
-  display: flex; /* Enables flexbox layout */
-  flex-direction: column; /* Arranges items vertically */
-  align-items: flex-start; /* Aligns items to the left (optional, change to 'center' for centering) */
-  gap: 10px; /* Adds spacing between the items */
-  margin-top: 1em;
+.person-prof p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffff; 
 }
 
-.social-icons a {
-  display: flex; /* Ensures that icon and text align properly */
-  align-items: center; /* Centers icon and text vertically */
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Inherits text color */
-}
-
-.social-icon {
-  width: 50px; /* Size of the social media icons */
+/* Style for icon square */
+.icon-square {
+  width: 50px;
   height: 50px;
-  border-radius: 8px; /* Makes the icons circular */
-  margin-right: 10px; /* Adds spacing between icon and text */
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; 
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Icon inside the square */
+.icon-square img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+/* Hover effect for square */
+.icon-btn:hover .icon-square {
+  background-color: #ff5e57;
+  border-color: #ff5e57;
+  transform: scale(1.1); 
+}
+
+/* Text alignment and spacing */
+.icon-btn {
+  color: #777;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  color: #ff5e57; /
 }
 
 
-.social-icons a:hover {
-  transform: translateX(10px); /* Adds slide effect */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
-.social-icon:hover {
-  transform: scale(1.2); /* Enlarges icon slightly */
-  transition: transform 0.3s ease-in-out;
+section#profiles {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  text-align: center; 
 }
 
-
+h2 {
+  margin-bottom: 20px; 
+}

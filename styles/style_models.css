@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(34, 34, 51,0.95);
+  background-color: rgba(34, 34, 51,0.9);
   padding: 1em;
   color: white;
   position: fixed;
