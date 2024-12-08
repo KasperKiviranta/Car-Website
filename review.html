@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Cars</title>
+  <link rel="stylesheet" href="styles/style_review.css">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Cool Cars</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section class="hero">
+    <div class="hero-text">
+        <h1>Customer Reviews</h1>
+    </div>  
+    <div class="review-form">
+        <form id="reviewForm">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
+          
+          <label for="rating">Rating:</label><br>
+          <select id="rating" name="rating" required>
+            <option value="" disabled>Select a rating</option>
+            <option value="5" selected>★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+          </select><br>
+          
+          <label for="review">Review:</label><br>
+          <textarea id="review" name="review" rows="4" required></textarea><br>
+          
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+      <!--Hidden by default --> 
+      <div class="popup" id="thankYouPopup">
+        <div class="popup-content">
+          <h2>Thank You!</h2>
+          <p>We appreciate your feedback!</p>
+          <p>Your review is under manual review</p>
+          <button id="closePopup">Close</button>
+        </div>
+      </div>
+
+    <div class="review-container">
+        <div class="review">
+            <h3>Appel</h3>
+            <p><strong>Rating:</strong> ★★★★★</p>
+            <p>"Exceptional buying experience from start to finish. The car exceeded my expectations. Highly recommend this dealership!"</p>
+            <p><em>Submitted on: September 30, 2024</em></p>
+          </div>
+          <div class="review">
+              <h3>Gogle</h3>
+              <p><strong>Rating:</strong> ★★★★★</p>
+              <p>"Absolutely love Cool Cars! The sleek designs and unmatched performance have exceeded my expectations. Highly recommend to anyone looking for a stylish and reliable ride!"</p>
+              <p><em>Submitted on: December 2, 2024</em></p>
+            </div>
+            <div class="review">
+                <h3>Amozan</h3>
+                <p><strong>Rating:</strong> ★★★★★</p>
+                <p>"The sales team listened to my needs and provided excellent guidance. Thrilled with my new car and the overall experience!"</p>
+                <p><em>Submitted on: December 3, 2024</em></p>
+              </div>
+    </div>
+    </section>
+    
+    <script>
+        //Javscript stuff to handle the pop up for thanking user for review
+
+        // Handle stuff
+        document.getElementById("reviewForm").onsubmit = function (event) {
+          event.preventDefault(); // Prevent form from submitting
+      
+          // Show popup
+          const popup = document.getElementById("thankYouPopup");
+          popup.style.display = "flex"; // Make visible
+      
+          this.reset();
+        };
+      
+        // popup close
+        document.getElementById("closePopup").onclick = function () {
+          const popup = document.getElementById("thankYouPopup");
+          popup.style.display = "none"; // Hide thank you message
+        };
+      </script>
+</body>
+</html>
+
+
+  

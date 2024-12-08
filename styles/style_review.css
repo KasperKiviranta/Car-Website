@@ -52,12 +52,14 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 90vh;
+  height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
+
+  flex-direction: column;
   z-index: 1;
 }
 .hero::after {
@@ -80,6 +82,18 @@ body {
   color: #ffffff;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
   z-index: 2; 
+  padding-top: 100px;
+}
+
+.review-form {
+  margin-top: 20px; /* Add some space between hero-text and review-form */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: make the form visually distinct */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  z-index: 2;
 }
 
 .hero-text p {
@@ -107,62 +121,84 @@ body {
 
 
 
-.cta-button {
-  background-color: #ff5e57;
-  color: #ffffff;
-  padding: 0.75em 2em;
-  text-decoration: none;
-  margin-top: 1em;
-  display: inline-block;
-  border-radius: 25px; 
-  font-weight: 600;
-  font-size: 1.2em;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 8px rgba(255, 94, 87, 0.5); 
-  position: relative; 
-  z-index: 2; 
-}
-.cta-button:hover {
-  background-color: #e14b47;
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 94, 87, 0.7); 
+.review-container {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
-/* Featured Cars Section */
-.featured-cars {
-  padding: 2em;
-  text-align: center;
-}
-.car-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 1.5em;
-}
-.car-card {
-  background: #223;
-  color: white;
-  padding: 1em;
-  width: 200px;
+.review {
+  background-color: #2a2a2a;
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-  border: 2px solid transparent; /* Initial border, transparent */
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Include border-color in transition */
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
-.car-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-color: #ff5e57; /* Set the border color on hover */
-}
-.car-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-.car-card h3 {
-  margin-top: 0.5em;
+.review h3 {
   color: #ff5e57;
+  margin-bottom: 5px;
+}
+
+.review p {
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+.review p strong {
+  color: #ffd700;
+}
+
+/* Popup container */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content box */
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background-color: #ff5e57;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #e14b47;
 }

@@ -9,7 +9,7 @@
 
 /* Dark Mode Styling */
 body {
-  background-color: #121212;
+  background-color: #1c1c1c;
   color: #f0f0f0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -154,20 +154,4 @@ body {
 .car-prof h3 {
   margin-top: 0.5em;
   color: #ff5e57;
-}
-.car-prof p {
-  overflow: hidden; 
-  white-space: nowrap; 
-  width: 0; 
-  animation: typing 1.5s steps(20) 0.3s forwards, blink 0.75s step-end 1.5s forwards; 
-}
-
-/* Keyframes for typing effect */
-@keyframes typing {
-  0% {
-    width: 0; 
-  }
-  100% {
-    width: 100%; 
-  }
 }
