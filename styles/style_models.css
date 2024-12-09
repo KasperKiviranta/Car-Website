@@ -7,11 +7,14 @@
   scroll-behavior: smooth;
 }
 
+
+
 /* Dark Mode Styling */
 body {
   background-color: #1c1c1c;
   color: #f0f0f0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.125;
 }
 
 /* Navbar */
@@ -30,7 +33,12 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0; /* Ensure no extra margin */
+  padding: 0; /* Remove any padding */
+  font-size: 16px;
+
 }
+
 .nav-links li {
   margin-left: 20px;
 }
@@ -117,20 +125,21 @@ body {
 
 }
 
+/* Profiles Section */
+
 .cars {
   display: grid;
   padding-top: 5%;
-  grid-template-columns: repeat(3, 1fr);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
   gap: 20px;
   justify-content: center;
   z-index: 1;
 }
+
 .car-prof {
   background: #223;
   color: white;
   padding: 1em;
-  width: 200px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -147,11 +156,40 @@ body {
 
 .car-prof img {
   width: 100%;
-  transform: scale(1.40);
+  transform: scale(1.2);
   border-radius: 8px;
 }
 
 .car-prof h3 {
   margin-top: 0.5em;
   color: #ff5e57;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .car-prof {
+    padding: 0.8em;
+  }
+
+  .car-prof h3 {
+    font-size: 1.2em;
+  }
+
+  .cars {
+    gap: 15px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .car-prof {
+    padding: 0.5em;
+  }
+
+  .car-prof h3 {
+    font-size: 1em;
+  }
+
+  .cars {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  }
 }

@@ -12,6 +12,7 @@ body {
   background-color: #1c1c1c;
   color: #f0f0f0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.125;
 }
 
 /* Navbar */
@@ -30,7 +31,12 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0; /* Ensure no extra margin */
+  padding: 0; /* Remove any padding */
+  font-size: 16px;
+
 }
+
 .nav-links li {
   margin-left: 20px;
 }
