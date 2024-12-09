@@ -23,26 +23,26 @@
         <h1>Customer Reviews</h1>
     </div>  
     <div class="review-form">
-        <form id="reviewForm">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required><br>
-          
-          <label for="rating">Rating:</label><br>
-          <select id="rating" name="rating" required>
-            <option value="" disabled>Select a rating</option>
-            <option value="5" selected>★★★★★</option>
-            <option value="4">★★★★☆</option>
-            <option value="3">★★★☆☆</option>
-            <option value="2">★★☆☆☆</option>
-            <option value="1">★☆☆☆☆</option>
-          </select><br>
-          
-          <label for="review">Review:</label><br>
-          <textarea id="review" name="review" rows="4" required></textarea><br>
-          
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+      <form id="reviewForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" class="form-input" required><br>
+        
+        <label for="rating">Rating:</label><br>
+        <select id="rating" name="rating" class="form-select" required>
+          <option value="" disabled>Select a rating</option>
+          <option value="5" selected>★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select><br>
+        
+        <label for="review">Review:</label><br>
+        <textarea id="review" name="review" class="form-textarea" rows="4" required></textarea><br>
+        
+        <input type="submit" class="form-submit" value="Submit">
+      </form>
+    </div>
       
       <!--Hidden by default --> 
       <div class="popup" id="thankYouPopup">
@@ -55,6 +55,7 @@
       </div>
 
     <div class="review-container">
+        <h3>Reviews</h3>
         <div class="review">
             <h3>Appel</h3>
             <p><strong>Rating:</strong> ★★★★★</p>
@@ -97,6 +98,10 @@
         };
       </script>
 </body>
+
+<footer class="footer">
+  <p>&copy; 2024 Cool Cars</p>
+</footer>
 </html>
 
 

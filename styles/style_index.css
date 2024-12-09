@@ -95,6 +95,8 @@ body {
   color: #dddddd;
   margin-top: 0.5em;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
   overflow: hidden; 
   white-space: nowrap; 
   width: 0; 
@@ -109,6 +111,7 @@ body {
   }
   100% {
     width: 100%; 
+  white-space: inherit; 
   }
 }
 
@@ -147,4 +150,22 @@ body {
 .d-block {
   border-radius: 15px;
 
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #223;  /* Dark background */
+  color: white;  /* White text */
+  text-align: center;  /* Center the text */
+  padding: 20px;  /* Add padding for spacing */
+  font-size: 1.2em;  /* Adjust the font size */
+  position: relative;  /* Fix the footer at the bottom */
+  bottom: 0;  /* Align at the bottom */
+  width: 100%;  /* Full width */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);  /* Add subtle shadow for depth */
+}
+
+.footer p {
+  margin: 0;  /* Remove default margin */
 }
