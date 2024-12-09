@@ -31,12 +31,14 @@
     </section>
 
     <section class="review-form container mt-5 pt-5">
-      <h2 class="text-center text-white mb-4">Write a Review</h2> <!-- Added heading here -->
+      <h2 class="text-center text-white mb-4">Write a Review</h2> 
       <form id="reviewForm" class="bg-dark text-white p-4 rounded shadow-lg">
+        <!-- Box for name -->
           <div class="mb-3">
               <label for="name" class="form-label">Name:</label>
               <input type="text" id="name" name="name" class="form-control" required>
           </div>
+          <!-- Choose stars -->
           <div class="mb-3">
               <label for="rating" class="form-label">Rating:</label>
               <select id="rating" name="rating" class="form-select" required>
@@ -48,10 +50,12 @@
                   <option value="1">★☆☆☆☆</option>
               </select>
           </div>
+          <!-- Text box -->
           <div class="mb-3">
               <label for="review" class="form-label">Review:</label>
               <textarea id="review" name="review" class="form-control" rows="4" required></textarea>
           </div>
+          <!-- Submi button -->
           <input type="submit" class="btn btn-danger w-100" value="Submit">
       </form>
   </section>
@@ -68,19 +72,22 @@
     </div>
 
     <section class="review-container container mt-5 pt-5">
-      <h2 class="text-center text-white">Customer Reviews</h2> <!-- Added heading here -->
+      <h2 class="text-center text-white">Customer Reviews</h2> 
+      <!-- Review 1 -->
       <div class="review bg-dark text-white p-3 rounded shadow-lg mb-3">
           <h4 class="text-danger">Appel</h4>
           <p><strong>Rating:</strong> ★★★★★</p>
           <p>"Exceptional buying experience from start to finish. The car exceeded my expectations. Highly recommend this dealership!"</p>
           <p><em>Submitted on: September 30, 2024</em></p>
       </div>
+      <!-- Review 2 -->
       <div class="review bg-dark text-white p-3 rounded shadow-lg mb-3">
           <h4 class="text-danger">Gogle</h4>
           <p><strong>Rating:</strong> ★★★★★</p>
           <p>"Absolutely love Cool Cars! The sleek designs and unmatched performance have exceeded my expectations. Highly recommend to anyone looking for a stylish and reliable ride!"</p>
           <p><em>Submitted on: December 2, 2024</em></p>
       </div>
+      <!-- Review 3 -->
       <div class="review bg-dark text-white p-3 rounded shadow-lg mb-3">
           <h4 class="text-danger">Amozan</h4>
           <p><strong>Rating:</strong> ★★★★★</p>
