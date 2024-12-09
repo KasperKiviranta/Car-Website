@@ -179,7 +179,7 @@ body {
 
 .popup-content button {
   padding: 10px 20px;
-  background-color: #ff5e57;
+  background-color: #313030;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -189,7 +189,7 @@ body {
 }
 
 .popup-content button:hover {
-  background-color: #e14b47;
+  background-color: #1a1a1a;
 }
 
 /* Footer Styling */
@@ -203,8 +203,10 @@ body {
   width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
+  z-index: 2;
 }
 
 .footer p {
   margin: 0;
 }
+
